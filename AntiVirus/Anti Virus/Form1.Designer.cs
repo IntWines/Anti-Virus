@@ -1,6 +1,6 @@
 ﻿namespace Anti_Virus
 {
-    partial class Form1
+    partial class frmVCKS
     {
         /// <summary>
         /// Required designer variable.
@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVCKS));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnBrowse = new System.Windows.Forms.Button();
+            this.btnScan = new System.Windows.Forms.Button();
+            this.lblVirus = new System.Windows.Forms.Label();
+            this.lblFolder = new System.Windows.Forms.Label();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,46 +53,47 @@
             // listBox1
             // 
             this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(213, 13);
+            this.listBox1.Location = new System.Drawing.Point(250, 7);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(301, 316);
             this.listBox1.TabIndex = 1;
             // 
-            // button1
+            // btnBrowse
             // 
-            this.button1.Location = new System.Drawing.Point(12, 216);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnBrowse.Location = new System.Drawing.Point(12, 216);
+            this.btnBrowse.Name = "btnBrowse";
+            this.btnBrowse.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowse.TabIndex = 2;
+            this.btnBrowse.Text = "Browse";
+            this.btnBrowse.UseVisualStyleBackColor = true;
+            this.btnBrowse.Click += new System.EventHandler(this.btnBrowse_Click);
             // 
-            // button2
+            // btnScan
             // 
-            this.button2.Location = new System.Drawing.Point(131, 216);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnScan.Location = new System.Drawing.Point(131, 216);
+            this.btnScan.Name = "btnScan";
+            this.btnScan.Size = new System.Drawing.Size(75, 23);
+            this.btnScan.TabIndex = 3;
+            this.btnScan.Text = "Scan";
+            this.btnScan.UseVisualStyleBackColor = true;
+            this.btnScan.Click += new System.EventHandler(this.btnScan_Click);
             // 
-            // label1
+            // lblVirus
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 246);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
+            this.lblVirus.AutoSize = true;
+            this.lblVirus.Location = new System.Drawing.Point(12, 246);
+            this.lblVirus.Name = "lblVirus";
+            this.lblVirus.Size = new System.Drawing.Size(0, 13);
+            this.lblVirus.TabIndex = 4;
             // 
-            // label2
+            // lblFolder
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 278);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "label2";
+            this.lblFolder.AutoSize = true;
+            this.lblFolder.Location = new System.Drawing.Point(12, 278);
+            this.lblFolder.Name = "lblFolder";
+            this.lblFolder.Size = new System.Drawing.Size(42, 13);
+            this.lblFolder.TabIndex = 5;
+            this.lblFolder.Text = "[Folder]";
             // 
             // progressBar1
             // 
@@ -100,20 +102,20 @@
             this.progressBar1.Size = new System.Drawing.Size(193, 23);
             this.progressBar1.TabIndex = 6;
             // 
-            // Form1
+            // frmVCKS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 335);
+            this.ClientSize = new System.Drawing.Size(563, 335);
             this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.lblFolder);
+            this.Controls.Add(this.lblVirus);
+            this.Controls.Add(this.btnScan);
+            this.Controls.Add(this.btnBrowse);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.pictureBox1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmVCKS";
+            this.Text = "VCKS Anti Virus";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -124,11 +126,12 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnBrowse;
+        private System.Windows.Forms.Button btnScan;
+        private System.Windows.Forms.Label lblVirus;
+        private System.Windows.Forms.Label lblFolder;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }
 
