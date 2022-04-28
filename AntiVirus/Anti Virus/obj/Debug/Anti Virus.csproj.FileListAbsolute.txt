@@ -1,0 +1,11 @@
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\bin\Debug\Anti Virus.exe.config
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\bin\Debug\Anti Virus.exe
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\bin\Debug\Anti Virus.pdb
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\obj\Debug\Anti Virus.csproj.AssemblyReference.cache
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\obj\Debug\Anti Virus.csproj.SuggestedBindingRedirects.cache
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\obj\Debug\Anti_Virus.frmVCKS.resources
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\obj\Debug\Anti_Virus.Properties.Resources.resources
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\obj\Debug\Anti Virus.csproj.GenerateResource.cache
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\obj\Debug\Anti Virus.csproj.CoreCompileInputs.cache
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\obj\Debug\Anti Virus.exe
+C:\Users\kien\source\repos\Anti Virus\AntiVirus\Anti Virus\obj\Debug\Anti Virus.pdb
